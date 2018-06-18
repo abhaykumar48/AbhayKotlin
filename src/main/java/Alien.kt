@@ -1,12 +1,17 @@
+import java.util.*
+
+//
 fun main(args : Array<String>)
 {
     println("This is Basic Kotlin, Hello World Program !")
 
+//
     val name = "Chris Gayle"
     var age = 36
 
     println("The Name and Age of Player is" + (name + age))
 
+//
     var bigInt : Int = Int.MAX_VALUE
     var smallInt : Int = Int.MIN_VALUE
 
@@ -42,7 +47,7 @@ fun main(args : Array<String>)
     println("The Integer Value of the Char A is" + letterAndWords.toInt())
     println("The Character Value of the Integer A is" + numberA.toChar())
 
-
+//
     var coolString = "Abhay"
     var hotString = "Ullas"
 
@@ -65,6 +70,8 @@ fun main(args : Array<String>)
     println("To find the sub sequence in any string" + newString.subSequence(2,7))
     println("to find one word in another sentence" + oldString.contains("Cool"))
 
+
+//
     var myArray = arrayOf(1, 3.14, "Abhay")
     println("The Array Values are ${myArray}")
 
@@ -74,4 +81,86 @@ fun main(args : Array<String>)
     println("To check the element in an Array is ${myArray.contains(3.14)}")
     println("To check the element in any index in an Array is ${myArray.indexOf(3.14)}")
     println("To check the First element in the array is ${myArray.first()}")
-}
+
+    var coolArray = Array(5, {x -> x * x})
+    println("To print an array which evaluates an expression & the result is ${coolArray[2]}")
+
+    var nums = 1..10
+    for (a in nums)
+    {
+        println(a)
+    }
+
+    var alphabets = "A".."Z"
+    println("R" in alphabets)
+
+    for (b in nums step 2)
+    {
+        println(b)
+    }
+
+    for (x in nums.reversed())
+    {
+        println(x)
+    }
+
+
+//
+    val personAge = 8
+    if (personAge < 5)
+    {
+        println("Go to Pre School")
+    }
+
+    else if (personAge > 5 && personAge < 10)
+    {
+        println("Go to Middle School")
+    }
+
+    else if (personAge > 10 && personAge < 17)
+    {
+        println("Go to high school")
+    }
+
+    else if (personAge > 25 || personAge < 50)
+    {
+        println("You are propably too late for school")
+    }
+
+    else
+    {
+        println("Go to college")
+    }
+
+//
+    when(personAge)
+    {
+        0,1,2,3,4 -> println("Please send the kid to Pre school")
+
+        in 5..10 ->
+            println("Send the Kid to Middle School")
+
+        else -> println("Get him to college")
+    }
+
+//
+    var goodNum = 1..5
+
+    var rand = Random()
+    val magicNumbers = rand.nextInt(20) + 1
+
+    var guessNum = 0
+
+    for (m in goodNum)
+    {
+        println("Numbers are ${m}")
+    }
+
+    while (magicNumbers != guessNum)
+    {
+        guessNum ++
+        println("The guessed number is ${guessNum}")
+    }
+
+//
+    }
